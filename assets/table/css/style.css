@@ -1,0 +1,592 @@
+@charset "UTF-8";
+/* RESET */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, font, img, ins, kbd, q, samp, small, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, nav, article, aside, footer, hgroup, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit; 
+	
+	
+	
+}
+
+
+.flight_deals{
+	padding: 50px 0;
+	/*background: -webkit-linear-gradient(bottom left, #c60c8f -33%, #344358  31%, #c60c8f 100%);*/
+	/*background: -o-linear-gradient(bottom left, #c60c8f -33%, #344358  31%, #c60c8f 100%);*/
+	/*background: linear-gradient(to top right, #c60c8f -33%, #344358  31%, #c60c8f 100%);*/
+	background: url(../images/main-bg.jpg) -webkit-linear-gradient(to left, #ff9103 5%, #e41875 70%);
+	background: url(../images/line-for-bt.png)-o-linear-gradient(to left, #ff9103 5%, #e41875 70%);
+	background: url(../images/main-bg.jpg) linear-gradient(to left, #ff9103 5%, #e41875 70%);
+	width: 100%;
+	height:600px;
+	
+}
+
+body{ height:100%;}
+html{ height:100%;}
+
+a{text-decoration:none !important;}
+html{ height:100%;}
+:focus, :active { outline: 0 }
+
+ol, ul { list-style: none }
+
+blockquote:before, blockquote:after { content: "" }
+blockquote { quotes: "" "" }
+
+header, nav, article, aside, footer, hgroup, section { display: block }
+
+/* Clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0; font-weight:normal;
+}
+* html .clearfix             { zoom: 1 } /* IE6 */
+*:first-child+html .clearfix { zoom: 1 } /* IE7 */
+.left_r {float: left;}
+.right_r { float: right; }
+.clear { clear: both; }
+.img100 img{ width:100%;}
+
+.align_left {text-align: left;}
+.align_right {text-align: right;}
+.center { text-align: center; }
+
+.display_none { display: none; }
+.display_block { display: block;}
+.absolute { position: absolute; }
+
+
+.main-top{ background:#FFF; padding:23px 0;}
+
+.top_main_banner{background:#000 url(../images/main-bg.jpg) no-repeat center; background-attachment: fixed; overflow:hidden !important; height:100%;
+  display: flex;position:relative;
+  align-items: center;
+  justify-content: center;
+	webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;}
+
+
+
+
+
+
+
+.top_main_banner{background:#FFF url(../images/bg_banner.png) no-repeat top right; background-attachment: fixed; webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+	
+	display: flex;position:relative;
+  align-items: center;
+  justify-content: left;
+	
+	}
+.top_content{ padding:20px 30px;margin-left: 3%;}
+.top_content h3{font-family: 'Open Sans', sans-serif; font-size:25px; color:#333; line-height:43px;}
+.top_content h1{font-family: 'Open Sans', sans-serif; font-size:150px; color:#d22f25; font-weight:700; margin: 0px 0px;}
+
+
+.test{font-family: 'Gilroy-Bold'; font-size:25px;}
+
+
+
+#leftSidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; /* needs to stay on top of the mainStack AND the sidePanel */
+  /* for demo only: */
+  min-width: 250px;
+  border-right: 1px solid #000;
+  background-color: rgba(255,255,255,0.5);
+}
+#leftSidebar > ul {
+  /* all of these are for demo only: */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#leftSidebar > ul > li {
+  /* all of these are for demo only: */
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid #999;
+}
+#panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8, #panel9, #panel10  {
+  /* all of these are for demo only: */
+  width: 100%;
+  height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+ 
+  
+}
+#panel1, #panel3, #panel5, #panel7, #panel9  {
+  /* for demo only: */
+ 
+}
+#panel2, #panel4, #panel6, #panel8 {
+  /* for demo only: */
+  
+}
+#sidePanelButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* for demo only: */
+  cursor: pointer;
+  padding: 40px;
+  border: 1px solid #000;
+  background-color: tomato;
+}
+#sidePanel {
+  width: 100%;
+  height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  left: 100%;
+  transition: left 0.4s; /* creates sliding motion */
+  -webkit-transition: left 0.4s;
+  z-index: 1; /* needs to be above the mainStack */
+  background-color: tomato; /* you need to set a background-color here so this panel covers up the others when it slides in. */
+  /* for demo only: */
+  text-align: center;
+  font-size: 50px;
+}
+#sidePanel.open {
+  left: 0; /* move the sidePanel into the viewport when you click the button */
+}
+	
+
+#leftSidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; /* needs to stay on top of the mainStack AND the sidePanel */
+  /* for demo only: */
+  min-width: 250px;
+  border-right: 1px solid #000;
+  background-color: rgba(255,255,255,0.5);
+}
+#leftSidebar > ul {
+  /* all of these are for demo only: */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#leftSidebar > ul > li {
+  /* all of these are for demo only: */
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid #999;
+}
+#panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8, #panel9, #panel10 {
+  /* all of these are for demo only: */
+  width: 100%;
+  height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+  
+  
+}
+#panel1, #panel3, #panel5, #panel7, #panel9  {
+  /* for demo only: */
+  
+}
+#panel2, #panel4, #panel6, #panel8  {
+  /* for demo only: */
+  
+}
+#sidePanelButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* for demo only: */
+  cursor: pointer;
+  padding: 40px;
+  border: 1px solid #000;
+  background-color: tomato;
+}
+#sidePanel {
+  width: 100%;
+  height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  left: 100%;
+  transition: left 0.4s; /* creates sliding motion */
+  -webkit-transition: left 0.4s;
+  z-index: 1; /* needs to be above the mainStack */
+  background-color: tomato; /* you need to set a background-color here so this panel covers up the others when it slides in. */
+  /* for demo only: */
+  text-align: center;
+  font-size: 50px;
+}
+#sidePanel.open {
+  left: 0; /* move the sidePanel into the viewport when you click the button */
+}
+
+
+
+
+
+/*=========================================================================*/
+
+
+
+/*=================================*/
+
+        .in-view .bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  20% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+  -webkit-transform: scale3d(.9, .9, .9);
+  transform: scale3d(.9, .9, .9);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(1.03, 1.03, 1.03);
+  transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+  -webkit-transform: scale3d(.97, .97, .97);
+  transform: scale3d(.97, .97, .97);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  20% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+  -webkit-transform: scale3d(.9, .9, .9);
+  transform: scale3d(.9, .9, .9);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(1.03, 1.03, 1.03);
+  transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+  -webkit-transform: scale3d(.97, .97, .97);
+  transform: scale3d(.97, .97, .97);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================*/
+header{ padding:15px 0; width: 100%; position:fixed; display: table;z-index: 1000;}
+.logo_main{ float: left;}
+.button_manage{  font-family: 'Gilroy-Regular'; padding:8px 19px; background:#68C8C9; display: block; float: right; color: #FFF; border-radius:4px; letter-spacing:.5px;-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.1);box-shadow: 0 0 5px 1px rgba(0,0,0,.1);}
+.button_manage:hover{ background: #1D1C1C; color: #FFF;}
+
+.first_main_slide{ background:url("../images/cross_line.svg")  top left repeat-y;height: 100%;}
+.first_main_slide{}
+/*=====*/
+.menu_right{ float:right;display: flex; align-items: center;  justify-content: right;}
+.menu_right ul{ float:left;margin-top: 0;margin-bottom: 0px;}
+.menu_right li{ float:left; margin-top:7px;}
+.menu_right li a{ font-family: 'Gilroy-Bold'; padding:0px 15px; color: #2B2B2B; font-size:14.5px;letter-spacing: .5px; font-weight:300;font-weight: normal;}
+
+
+
+
+
+/*===================*/
+
+/*  */
+
+.fp-viewing-10 .top_color_change{ background: #FFF;}
+ 
+.position_bg{-webkit-transition:all .4s linear;
+	-moz-transition:all .4s linear;
+	-o-transition:all .4s linear;
+	-ms-transition:all .4s linear;}
+.position_bg.fp-viewing-firstPage{ background:url("../images/animation_1.gif") no-repeat center right 25%;background-size: 750px;}
+.position_bg.fp-viewing-secondPage{
+    
+    background:url("../images/animation_1.gif") no-repeat center right 25% ; background-size: 750px;
+    overflow:auto;
+}
+
+
+
+.powerd_by h6{  font-family: 'Gilroy-Medium';padding-left: 10px; color: #848484;
+    font-size: 15px !important;}
+
+
+.powerd_by h6 span{font-family: 'Gilroy-Bold';color: #6d6d6d;}
+
+
+.top_color_change {
+    background:#FFF;border-bottom: 1px solid #f6f6f6;
+}
+.fp-viewing-firstPage .top_color_change, .fp-viewing-secondPage .top_color_change{background:none !important;border-bottom:none !important;}
+
+
+.animation_teting{ height:800px;}
+/*#particle-slider{ height:750px;}*/
+
+
+
+#particle-slider {
+    height: 100%;
+    height: 656px !important;margin-top: -187px;
+	
+}
+.navbar{margin-bottom:0px !important;border:none !important;}
+.main_home{ height: 100%;display: flex;align-items: center;justify-content: center;}
+/*============*/
+.drop_down_bts{position:relative;}
+.sub_drop{ width:258px; padding:14px; border-radius: 5px; position: absolute; background: #FFF;-webkit-box-shadow: 0 5px 5px 1px rgba(0,0,0,.1);
+box-shadow: 0 5px 5px 1px rgba(0,0,0,.1);margin-top: 20px;border: 1px solid #eee;right: 0px;}
+.sub_drop ul{ width: 100%;}
+.sub_drop ul li{ display: block !important; float: none !important; padding:8px 0px; border-bottom:1px dotted #CBCBCB;border-radius:2px;}
+.sub_drop ul li:last-child{ border: none;}
+.sub_drop ul li a{ font-family: 'Gilroy-Bold';color: #3A3939;font-size: 13px; outline: none; display: block;}
+
+
+.sub_drop .active{ background:#68C8C9;}
+.sub_drop .active a{ color:#FFF}
+.drop_list{ display: none;}
+
+.tearmas_condition{ padding:100px 0 0 0;background:#F6F6F6;}
+.inside_tearms {}
+
+.inside_tearms h2{ font-family: 'Gilroy-Heavy'; font-size:22px;  color:#000; margin-bottom: 20px;}
+.inside_tearms h3{ font-family: 'Gilroy-Bold'; font-size:19px;  color:#000; margin-bottom: 20px;}
+.inside_tearms h4{ font-family: 'Gilroy-Bold'; font-size:16px;  color:#727070; margin-bottom: 20px; padding-left:15px;}
+.inside_tearms h5{ font-family: 'Gilroy-Bold'; font-size:18px;  color:#000; margin: 10px 0; padding-left:15px;}
+.inside_tearms h6{ font-family: 'Gilroy-Bold'; font-size:17px;  color:#353535; margin: 10px 0; padding-left:0px;}
+.inside_tearms p{ font-family: 'Gilroy-Regular';font-size:15px; color: #525252; margin-bottom: 20px;line-height: 27px;}
+.inside_tearms ul { padding:15px 15px;}
+.inside_tearms ul li{ font-family: 'Gilroy-Regular';font-size:15px; color: #525252; margin-bottom: 20px;line-height: 27px;}
+
+.you_may_box{ padding:18px; background: #FFFFFF; border: 1px solid #E9E9E9; margin-bottom: 20px; width: 100%; border-radius:8px;}
+
+/*=======*/
+
+.client_rewiew_box{ margin-left:10%; padding:22px 19px;border-radius: 10px;background-color: rgba(0, 0, 0, 0.4);
+}
+.animation_wrapp{/*background: #D10A3F; */padding:100px 0 0px;
+
+	 background: url("../images/bg_table.jpg") no-repeat center;
+	webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+	
+}
+
+
+.animation_wrapp .container{padding:10px 0 !important; background: none;}
+.animation_wrapp h1{font-family: 'Gilroy-Bold';font-size:22px; color: #FFF;text-align: left !important;margin-bottom: 11px;}
+.animation_wrapp p{font-family: 'Gilroy-Regular';font-size:14px; margin: 5px 0 25px 0;line-height: 27px; text-align: left !important; color:#FFF;}
+.slide_review{ margin-top: 15px;}
+.box_review_slide{ display:table; width: 100%;}
+/*============*/
+.logo_main{font-family: 'Gilroy-Bold';font-size:15px; color: #2D2D2D;}
+.profile_box{ width: 161px; height: 200px; padding:13px 2px 9px;background: #EFEFEF; text-align: center; float: left;border-radius: 3px;}
+.profile_box h3{font-family: 'Gilroy-Bold';font-size:15px; color: #2D2D2D;}
+.profile_box h6{font-family: 'Gilroy-Regular';font-size:12px; color: #747474;margin-top: 6px;}
+.prole_pic{ width:130px; height:132px; margin: auto;border-radius: 2px;}
+.prole_pic img{ width:100%;}
+
+.content_right{ float: left; width: 75%; padding-left: 10px;padding-top: 24px;}
+
+.content_right p span { color:#FFF; font-weight: 700;font-size: 30px;}
+.content_right p{ font-size: 16px;padding-left: 5%; font-weight: normal;}
+
+.vector_fHeight{ height:500px;}
+.banner_slide{}
+
+.first_slide_bann{ padding-top: 120px;}
+.banner_slide .owl-dots{ display: none;}
+
+.margTop60{ margin-top:60px;}
+/*==================*/
+.mob_svArt, .mob_svArt { height:544px;}
+
+.p-index-kv__scroll {
+    width: 1px;
+    height: 54px;
+    position: absolute;
+    bottom: 25px;
+    left: 60px;
+    z-index: 20;
+    background-color: 
+    #ababab;
+}
+/*.p-index-kv__scroll-pointer {
+    width: 9px; background: #000;
+    height: 9px;
+    position: absolute;
+    top: -4px;
+    left: -4px;	
+	animation: MoveUpDown 1s linear infinite;
+ 
+ 	
+}*/
+
+
+
+
+.object {
+    
+}
+
+
+
+
+.object { animation: MoveUpDown 1s linear infinite;  position: absolute;
+  left: -4px;  bottom: 0;	 width: 9px; background: #4E4E4E;  height: 9px;border-radius: 150px;}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+
+.down_click{ width: 120px; height:54px; display: block; outline:none;background: url("../images/arrow_down.svg")  no-repeat left 10px bottom 0px;;background-size:10px;
+opacity: 0.0;
+  filter: alpha(opacity=0); /* For IE8 and earlier */
+-webkit-transition:all .4s linear;
+	-moz-transition:all .4s linear;
+	-o-transition:all .4s linear;
+	-ms-transition:all .4s linear;}
+.down_click:hover{ opacity: 0.5;
+  filter: alpha(opacity=5); /* For IE8 and earlier */ margin-left: 10px;}
+
+
+
+
+.main_top_wrap{ padding-top:150px;}
+.main_top_wrap h1{font-family: 'Gilroy-Medium';font-size:22px; color: #acacac;text-align: left !important;margin-bottom: 11px; line-height: 39px; float:left;}
+.main_top_wrap h1 span{font-size: 35px;font-family: 'Gilroy-Bold'; color: #131313;}
+
+.booking_wrapp{ background:#FBFBFB; margin-top:50px; padding:34px 20px; border-radius:10px;}
+.booking_wrapp h2 {font-family: 'Gilroy-Light';font-size: 19px;color:#5B5B5B;margin-bottom:34px;}
+.set_box{ width:109px; height:109px; background: #FFF;-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+box-shadow: 0 0 5px 1px rgba(0,0,0,.1); border-radius:5px; display: block; padding: 11px 14px; margin-right: 10px;}
+
+.set_box{}
+.set_box h3{font-family: 'Gilroy-Light'; font-size:9px; color: #8F8F8F; margin-top: 12px;}
+.set_box h4{font-family: 'Gilroy-Bold'; font-size:17px; color: #262626; margin-top: 0px;}
+.set_box h5{font-family: 'Gilroy-Light';font-size:9px; color: #85A008; margin-top: 2px;}
+
+.booing_bts_wrapp{display: flex; align-items:center;  justify-content:left;}
+
+.not_avialable{ background: #E3E3E3;box-shadow:none;}
+.not_avialable h5{ color:#DB0003 !important; }
+.ico_ri{ float: right;}
+
+
+.modal-content{font-family: 'Gilroy-Light';}
+
+.modal-header h4{font-family: 'Gilroy-Bold';font-size:16px; color: #313131;}
+.list_food_box{display: flex; align-items:center;  justify-content:left; padding:5px 5px;border-bottom: 1px solid #eee;margin-bottom: 9px;}
+.pic_food{ width: 60px; height: 60px; background: #E7E7E7; border-radius:5px;}
+.food_name_wrap{ width: 60%;padding-left: 13px;}
+.food_name_wrap h4{font-family: 'Gilroy-Bold'; margin-top: 5px;}
+.food_name_wrap h2{margin-top: 0px; font-size:14px;}
+.min_plus_rap{ width:110px; float: right;}
+.pic_food{ overflow: hidden;}
+.pic_food img{ width: 100%;}
+
+.sub_toatal{display: flex;justify-content: space-between; padding:10px 20px;}
+.sub_toatal h2{font-family: 'Gilroy-Bold';font-size:19px; color: #313131;}
+
+
+/*=============*/
+.my_booing_wrapp{font-family: 'Gilroy-Light';padding-top: 100px;}
+.my_booing_wrapp h1{font-family: 'Gilroy-Bold';font-size:25px; color: #313131;}
+.booking_main_wrapp{padding: 25px 31px; margin-top: 16px; background: #F8F8F8; border-radius:15px; width: 70%;margin-bottom: 15px;}
+.booking_main_wrapp h2{ font-family: 'Gilroy-Bold';font-size:16px;}
+.booking_main_wrapp h3{color: #777;margin-top: 4px;}
+.booking_main_wrapp h4{ font-family: 'Gilroy-Light'; font-size: 11px;}
+.booking_main_wrapp .list_food_box{padding: 17px 5px;}
+
+
+.detail_bts{font-family: 'Gilroy-Regular'; padding:10px 25px; border-radius:31px; background:#2B2B2B; color: #9B9B9B;}
+.detail_bts:hover{ background: #85A008; color: #FFF;}
+.arrange_set{display: flex; justify-content: space-between;}
+.arrange_set .food_name_wrap{ width: 78%;}
+
+.booking_details{}
+.booking_details h2{ font-size:30px; line-height: 41px; margin-bottom: 15px;}
+.booking_details h2 span{font-family: 'Gilroy-Regular'; }
+.booking_details h3{font-size:15px;font-family: 'Gilroy-Regular';}
+.booking_details h4{font-size:15px;font-family: 'Gilroy-Bold';margin: 53px 0px 5px;}
+
+.list_food li{ padding:9px 0; font-size:15px;list-style: inside;}
